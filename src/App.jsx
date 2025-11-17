@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
@@ -9,11 +9,15 @@ import GenerativeAIPage from './features/services/GenerativeAIPage';
 import MarketingPage from './features/services/MarketingPage';
 
 function ScrollToTop() {
-  const { pathname, hash } = window.location;
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (!hash) {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
     }
   }, [pathname, hash]);
 
