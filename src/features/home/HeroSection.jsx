@@ -12,11 +12,18 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1558769132-cb1aea65c441?w=1920&h=1080&fit=crop&q=80"
+          alt="3D Fashion Background"
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+      </div>
 
       {/* Animated background pattern */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:64px_64px]" />
       </div>
 

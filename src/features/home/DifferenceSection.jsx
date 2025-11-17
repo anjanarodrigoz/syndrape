@@ -20,16 +20,22 @@ export default function DifferenceSection() {
 
           {/* Visual Element */}
           <div className="relative">
-            <div className="aspect-square rounded-lg bg-gradient-to-br from-secondary via-accent/20 to-secondary border border-border overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center p-8">
+            <div className="aspect-square rounded-lg border border-border overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800&h=800&fit=crop&q=80"
+                alt="Digital Twin Technology"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/40 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center p-8">
                 <div className="text-center space-y-4">
-                  <div className="text-6xl font-bold text-accent/20">3D</div>
-                  <div className="h-px w-32 bg-border mx-auto" />
-                  <div className="text-2xl font-semibold text-muted-foreground">
+                  <div className="text-6xl font-bold text-accent">3D</div>
+                  <div className="h-px w-32 bg-accent/50 mx-auto" />
+                  <div className="text-2xl font-semibold text-white">
                     Digital Twins
                   </div>
-                  <div className="h-px w-32 bg-border mx-auto" />
-                  <div className="text-6xl font-bold text-accent/20">AI</div>
+                  <div className="h-px w-32 bg-accent/50 mx-auto" />
+                  <div className="text-6xl font-bold text-accent">AI</div>
                 </div>
               </div>
             </div>

@@ -19,6 +19,7 @@ export default function ServicesSection() {
               title={service.shortTitle}
               description={service.description}
               link={service.link}
+              image={service.image}
             />
           ))}
         </div>

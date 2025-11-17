@@ -32,6 +32,7 @@ export const SERVICES = [
     shortTitle: 'Technical 3D Garments',
     description: 'We build 1:1 "Digital Twins" of your garments, perfect for virtual fittings and replacing costly physical samples.',
     link: '/services/3d-prototyping',
+    image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800&h=600&fit=crop&q=80',
     features: [
       {
         title: 'Precise Measurements',
@@ -54,6 +55,11 @@ export const SERVICES = [
       headline: 'The 1:1 Digital Twin.',
       body: 'Our 3D prototypes are more than just models. They are "Digital Twins," built with precise, real-world measurements and "to-spec" construction. Use them for virtual fittings, pre-production reviews, and eliminating costly physical sampling rounds.',
     },
+    galleryImages: [
+      'https://images.unsplash.com/photo-1558769132-cb1aea65c441?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=600&h=600&fit=crop&q=80',
+    ],
   },
   {
     id: 'generative-ai',
@@ -61,6 +67,7 @@ export const SERVICES = [
     shortTitle: 'Generative AI Visuals',
     description: 'From instant moodboards to lifelike digital photoshoots, we turn concepts into stunning, realistic visuals in seconds.',
     link: '/services/generative-ai',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80',
     features: [
       {
         title: 'Instant Visualizations',
@@ -83,6 +90,11 @@ export const SERVICES = [
       headline: 'From Idea to Lifelike, Instantly.',
       body: 'Don\'t wait weeks for a photoshoot. Our Generative AI services bring your wildest ideas to life in seconds. From rapid mood boards to generating entire virtual campaigns, we use AI to help you create at the speed of thought.',
     },
+    galleryImages: [
+      'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=600&h=600&fit=crop&q=80',
+    ],
   },
   {
     id: 'marketing-content',
@@ -90,6 +102,7 @@ export const SERVICES = [
     shortTitle: 'Marketing Content',
     description: 'Combine the precision of 3D with the speed of AI to create next-generation social media campaigns and virtual try-ons.',
     link: '/services/marketing-content',
+    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=600&fit=crop&q=80',
     features: [
       {
         title: '360° E-commerce Spins',
@@ -112,6 +125,11 @@ export const SERVICES = [
       headline: 'Your Assets, Reimagined.',
       body: 'We combine the precision of your 3D Digital Twin with the power of Generative AI to create a library of marketing assets. One 3D model can become an entire social media campaign, an interactive e-commerce experience, or a virtual try-on filter.',
     },
+    galleryImages: [
+      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=600&fit=crop&q=80',
+    ],
   },
 ];
 
@@ -154,7 +172,7 @@ export const PROJECTS = [
     client: 'Reputable Brand',
     service: '3D Prototyping',
     description: 'Created precise digital twins of an entire collection, enabling virtual fittings and eliminating 3 rounds of physical sampling.',
-    image: '/projects/project-1.jpg',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=800&fit=crop&q=80',
   },
   {
     id: 2,
@@ -163,7 +181,7 @@ export const PROJECTS = [
     client: 'Classified',
     service: 'Generative AI Photoshoot',
     description: 'Generated an entire seasonal campaign using AI, featuring virtual models in diverse environments with photorealistic quality.',
-    image: '/projects/project-2.jpg',
+    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=800&fit=crop&q=80',
   },
   {
     id: 3,
@@ -172,7 +190,7 @@ export const PROJECTS = [
     client: 'Leading E-commerce Brand',
     service: 'Marketing Content',
     description: 'Developed AR try-on filters and 360° product views, increasing conversion rates by 45%.',
-    image: '/projects/project-3.jpg',
+    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&h=800&fit=crop&q=80',
   },
   {
     id: 4,
@@ -181,7 +199,7 @@ export const PROJECTS = [
     client: 'Premium Textile Company',
     service: '3D Prototyping',
     description: 'Advanced fabric simulation showcasing drape, weight, and texture across multiple material types.',
-    image: '/projects/project-4.jpg',
+    image: 'https://images.unsplash.com/photo-1558769132-cb1aea65c441?w=800&h=800&fit=crop&q=80',
   },
   {
     id: 5,
@@ -190,7 +208,7 @@ export const PROJECTS = [
     client: 'Emerging Designer',
     service: 'Generative AI',
     description: 'Transformed rough sketches into photorealistic visualizations for investor presentations.',
-    image: '/projects/project-5.jpg',
+    image: 'https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=800&h=800&fit=crop&q=80',
   },
   {
     id: 6,
@@ -199,6 +217,6 @@ export const PROJECTS = [
     client: 'Fashion House',
     service: 'Marketing Content',
     description: 'Created a complete digital lookbook with AI-generated backgrounds and lighting, no photoshoot required.',
-    image: '/projects/project-6.jpg',
+    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=800&fit=crop&q=80',
   },
 ];

@@ -19,22 +19,23 @@ export default function WorkSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {featuredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="group cursor-pointer"
-            >
-              <div className="aspect-square rounded-lg bg-gradient-to-br from-secondary to-secondary/30 border border-border overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:border-accent/50 group-hover:shadow-lg group-hover:shadow-accent/10">
-                <div className="w-full h-full flex items-center justify-center p-8 relative">
-                  <div className="text-center">
-                    <p className="text-xl font-semibold mb-2">{project.title}</p>
-                    <p className="text-sm text-muted-foreground">{project.service}</p>
-                  </div>
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-sm font-medium">View Project</p>
-                  </div>
+            <Link to="/projects" key={project.id} className="group">
+              <div className="aspect-square rounded-lg border border-border overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:border-accent/50 group-hover:shadow-lg group-hover:shadow-accent/10 relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <p className="text-xl font-semibold mb-1">{project.title}</p>
+                  <p className="text-sm text-white/80">{project.service}</p>
+                </div>
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <p className="text-sm font-medium">View Project</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

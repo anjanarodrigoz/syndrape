@@ -63,12 +63,16 @@ export default function ServicePageTemplate({ service }) {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center">Our Work</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((item) => (
+              {service.galleryImages?.map((image, index) => (
                 <div
-                  key={item}
-                  className="aspect-square rounded-lg bg-gradient-to-br from-secondary to-secondary/30 border border-border flex items-center justify-center"
+                  key={index}
+                  className="aspect-square rounded-lg border border-border overflow-hidden group"
                 >
-                  <p className="text-muted-foreground">Sample {item}</p>
+                  <img
+                    src={image}
+                    alt={`${service.title} example ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
               ))}
             </div>
