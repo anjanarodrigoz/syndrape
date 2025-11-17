@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 251 100% 5.3%;
+    --foreground: 0 0% 98%;
+    --card: 223 44% 11%;
+    --card-foreground: 0 0% 98%;
+    --primary: 223 44% 11%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 223 35% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 223 30% 20%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+    --border: 223 40% 18%;
+    --input: 223 44% 11%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted));
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
