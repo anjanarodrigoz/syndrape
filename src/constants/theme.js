@@ -1,8 +1,9 @@
 // Theme configuration for Syndrape website
 export const THEME = {
   colors: {
-    primary: '#0A0A0A',
-    secondary: '#1A1A1A',
+    primary: '#101729',
+    secondary: '#1A1F35',
+    background: '#05001b',
     accent: '#F5F5F5',
     highlight: '#3B82F6',
     text: {
@@ -10,7 +11,7 @@ export const THEME = {
       secondary: '#A3A3A3',
       muted: '#737373',
     },
-    border: '#262626',
+    border: '#1E2538',
   },
   fonts: {
     primary: 'Inter, sans-serif',
