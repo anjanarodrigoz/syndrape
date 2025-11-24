@@ -12,7 +12,14 @@ const VIEW_PRESETS = {
   top: { position: [0, 5, 0], rotation: [-Math.PI / 2, 0, 0], label: 'Top' },
 };
 
-export default function ModelCanvas({ modelPath, showControls = true, enableAutoRotate = false }) {
+export default function ModelCanvas({
+  modelPath,
+  showControls = true,
+  enableAutoRotate = false,
+  enableOrbitControls = true,
+  enableZoom = true,
+  enablePan = false
+}) {
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [currentView, setCurrentView] = useState('front');
@@ -122,7 +129,7 @@ export default function ModelCanvas({ modelPath, showControls = true, enableAuto
       )}
 
       <Canvas
-        camera={{ position: [0, 0, 5], fov: 45 }}
+        camera={{ position: [1, 0, 2], fov: 45 }}
         style={{ background: 'transparent' }}
         onCreated={({ gl }) => {
           console.log('Canvas created successfully');
@@ -139,6 +146,9 @@ export default function ModelCanvas({ modelPath, showControls = true, enableAuto
             viewRotation={VIEW_PRESETS[currentView].rotation}
             autoRotate={autoRotate}
             zoom={zoom}
+            enableControls={enableOrbitControls}
+            enableZoom={enableZoom}
+            enablePan={enablePan}
           />
         </Suspense>
       </Canvas>

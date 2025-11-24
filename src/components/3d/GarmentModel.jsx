@@ -1,13 +1,18 @@
 import { useRef, useEffect, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { useGLTF, PresentationControls, Stage } from '@react-three/drei';
+import { useGLTF, OrbitControls, Stage } from '@react-three/drei';
 
 export default function GarmentModel({
-  modelPath = '/models/t_shirt.glb',
+  modelPath = '/models/garment.glb',
   onError,
   viewRotation = [0, 0, 0],
   autoRotate = false,
-  zoom = 1
+  zoom = 1,
+  enableControls = true,
+  enableZoom = true,
+  enablePan = false,
+  minDistance = 2,
+  maxDistance = 10
 }) {
   const meshRef = useRef();
   const groupRef = useRef();
@@ -43,16 +48,20 @@ export default function GarmentModel({
   });
 
   return (
-    <PresentationControls
-      global
-      enabled={!autoRotate}
-      config={{ mass: 4, tension: 170 }}
-      snap={{ mass: 4, tension: 400 }}
-      rotation={[0.5, 0, 0]}
-      polar={[-Math.PI / 4, Math.PI / 4]}
-      azimuth={[-Math.PI / 4, Math.PI / 4]}
-      speed={1.5}
-    >
+    <>
+      {enableControls && (
+        <OrbitControls
+          enableZoom={enableZoom}
+          enablePan={enablePan}
+          enableRotate={!autoRotate}
+          minDistance={minDistance}
+          maxDistance={maxDistance}
+          autoRotate={autoRotate}
+          autoRotateSpeed={2}
+          dampingFactor={0.05}
+          enableDamping
+        />
+      )}
       <Stage environment="city" intensity={1} contactShadow={false}>
         <group ref={groupRef} rotation={viewRotation}>
           <primitive
@@ -63,7 +72,7 @@ export default function GarmentModel({
           />
         </group>
       </Stage>
-    </PresentationControls>
+    </>
   );
 }
 

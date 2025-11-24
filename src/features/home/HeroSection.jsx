@@ -72,7 +72,14 @@ export default function HeroSection() {
                 <div className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin" />
               </div>
             }>
-              <ModelCanvas modelPath="/models/t_shirt.glb" showControls={false} enableAutoRotate={true} />
+              <ModelCanvas
+                modelPath="/models/over_shirt.glb"
+                showControls={false}
+                enableAutoRotate={false}
+                enableOrbitControls={true}
+                enableZoom={true}
+                enablePan={true}
+              />
             </Suspense>
           </div>
         </div>
