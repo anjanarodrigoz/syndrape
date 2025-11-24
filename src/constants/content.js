@@ -29,7 +29,7 @@ export const SERVICES = [
   {
     id: '3d-prototyping',
     title: 'Technically Accurate 3D Prototyping',
-    shortTitle: 'Technical 3D Garments',
+    shortTitle: 'Technical 3D garments',
     description: 'We build 1:1 "Digital Twins" of your garments, perfect for virtual fittings and replacing costly physical samples.',
     link: '/services/3d-prototyping',
     image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800&h=600&fit=crop&q=80',
